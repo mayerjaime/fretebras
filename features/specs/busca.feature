@@ -7,14 +7,14 @@ Funcionalidade: Busca
 Cenario: Pesquisa e filtro
   Dado que estou no site da OLX
   Quando pesquiso o termo "Notebook"
-  Entao devo visualizar o titulo e valor dos cinco primeiros resultados retornados
+  Entao deve carregar os anuncios de acordo com resultado da pesquisa
 
 @pesquisa-screenshoot
 Cenario: Pesquisa e filtro
   Dado que estou no site da OLX
   Quando pesquiso o termo "Notebook"
-  E faco a paginacao
-  Entao devo acessar o primeiro anuncio retornado
+  E acesso o primeiro anuncio da segunda pagina
+  Entao deve exibir a pagina com os detalhes do anuncio
 
 
 

@@ -6,19 +6,18 @@ Quando('pesquiso o termo {string}') do |termo_pesquisa|
   @home.pesquisa_termo(termo_pesquisa)
 end
 
-Entao('devo visualizar o titulo e valor dos cinco primeiros resultados retornados') do
+Entao('deve carregar os anuncios de acordo com resultado da pesquisa') do
   titulos = all('.OLXad-list-title').collect(&:text)
   puts titulos.take(5)
   precos = all('.OLXad-list-price').collect(&:text)
   puts precos.take(5)
 end
 
-Quando('faco a paginacao') do
+Quando('acesso o primeiro anuncio da segunda pagina') do
   @busca.paginacao.click
+  @busca.titulo_produto.first.click
 end
 
-Entao('devo acessar o primeiro anuncio retornado') do
-  @busca.titulo_produto.first.click
+Entao('deve exibir a pagina com os detalhes do anuncio') do
   page.driver.browser.switch_to.window(page.driver.browser.window_handles.last)
-  sleep(5)
 end
