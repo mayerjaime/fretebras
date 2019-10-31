@@ -1,9 +1,11 @@
 #language: pt
 
-Funcionalidade: Busca
-  - Eu como cliente quero efetuar testes para o Cadastro e validar o comportamento dos campos principais
+Funcionalidade: Realizar pesquisa de produto
+Como um cliente
+Eu quero poder realizar pesquisas no site
+Para que eu possa encontrar os produtos 
 
-@pesquisa
+@pesquisa-simples
 Cenario: Pesquisa e filtro
   Dado que estou no site da OLX
   Quando pesquiso o termo "Notebook"
