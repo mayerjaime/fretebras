@@ -3,6 +3,6 @@ Before do
   @busca = BuscaPage.new
 end
 
-After do ('@pesquisa-screenshoot')
-  page.save_screenshot('screenshoot/print.png')
+After do ('@pesquisa-screenshot')
+  page.save_screenshot('screenshot/print.png')
 end

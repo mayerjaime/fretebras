@@ -11,7 +11,7 @@ Cenario: Pesquisa e filtro
   Quando pesquiso o termo "Notebook"
   Entao deve carregar os anuncios de acordo com resultado da pesquisa
 
-@pesquisa-screenshoot
+@pesquisa-screenshot
 Cenario: Pesquisa e filtro
   Dado que estou no site da OLX
   Quando pesquiso o termo "Notebook"
