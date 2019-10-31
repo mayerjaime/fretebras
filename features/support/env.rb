@@ -5,17 +5,8 @@ require 'rspec'
 require 'site_prism'
 require 'pry'
 
-Capybara.default_driver = :selenium_chrome
-
-Capybara.app_host = 'https://www.olx.com.br'
-
-CAPS = Selenium::WebDriver::Remote::Capabilities.chrome(
-  'chromeOptions' => {
-    'args' => ['--start-maximized',
-               '--test-type',
-               '--no-sandbox',
-               '--incognito',
-               '--no-cache'],
-    'excludeSwitches' => ['--ignore-certificate-errors']
-  }
-)
+Capybara.configure do |config|
+  config.default_driver = :selenium_chrome
+  config.app_host = 'https://www.olx.com.br'
+  config.default_max_wait_time = 30
+end
